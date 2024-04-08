@@ -9,3 +9,7 @@ switch (num) {
         console.log(true);
         break;
 }
+
+a=0;
+
+console.log(++a)
