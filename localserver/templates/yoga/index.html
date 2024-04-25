@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<title>Yoga</title>
 	
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
-	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 	<header>
@@ -59,7 +60,7 @@
 						</div>
 					</div>
 					<div class="photo">
-						<img src="img/massage.jpg" alt="Massage">
+						<img src="{% static 'img/massage.jpg' %}" alt="Massage">
 					</div>
 				</div>
 				<div class="info-tabcontent fade">
@@ -71,7 +72,7 @@
 						</div>
 					</div>
 					<div class="photo">
-						<img src="img/sunset.jpg" alt="sunset">
+						<img src="{% static 'img/sunset.jpg' %}" alt="sunset">
 					</div>
 				</div>
 				<div class="info-tabcontent fade">
@@ -83,7 +84,7 @@
 						</div>
 					</div>
 					<div class="photo">
-						<img src="img/sunrise.jpg" alt="sunrise">
+						<img src="{% static 'img/sunrise.jpg' %}" alt="sunrise">
 					</div>
 				</div>
 				<div class="info-tabcontent fade">
@@ -95,7 +96,7 @@
 						</div>
 					</div>
 					<div class="photo">
-						<img src="img/yoga.jpg" alt="yoga">
+						<img src="{% static 'img/yoga.jpg' %}" alt="yoga">
 					</div>
 				</div>
 			</div>
@@ -119,16 +120,16 @@
 				<div class="wrap">
 
 					<div class="slider-item fade">
-						<img src="img/slider_1.jpg" alt="slider">
+						<img src="{% static 'img/slider_1.jpg' %}" alt="slider">
 					</div>
 					<div class="slider-item fade">
-						<img src="img/slider_2.jpg" alt="slider">
+						<img src="{% static 'img/slider_2.jpg' %}" alt="slider">
 					</div>
 					<div class="slider-item fade">
-						<img src="img/slider_3.jpg" alt="slider">
+						<img src="{% static 'img/slider_3.jpg' %}" alt="slider">
 					</div>
 					<div class="slider-item fade">
-						<img src="img/slider_4.jpg" alt="slider">
+						<img src="{% static 'img/slider_4.jpg' %}" alt="slider">
 					</div>
 
 					<div class="prev"><div class="arrow-left"></div></div>
@@ -167,7 +168,7 @@
 			</div>
 			<div class="contact" id="contacts">
 				<div class="contact-img">
-					<img src="img/letter.png" alt="letter">
+					<img src="{% static 'img/letter.png' %}" alt="letter">
 				</div>
 				<div class="contact-form">
 					<div class="contact-form-title">
@@ -186,22 +187,22 @@
 				<div class="social">
 					<div class="social-block">
 						<a href="#">
-						<img src="logo/twitter-logo-silhouette.svg" alt="">
+						<img src="{% static 'logo/twitter-logo-silhouette.svg' %}" alt="">
 						</a>
 					</div>
 					<div class="social-block">
 						<a href="#">
-						<img src="logo/facebook-logo.svg" alt="">
+						<img src="{% static 'logo/facebook-logo.svg' %}" alt="">
 						</a>
 					</div>
 					<div class="social-block">
 						<a href="#">
-						<img src="logo/instagram-social-network-logo-of-photo-camera.svg" alt="">
+						<img src="{% static 'logo/instagram-social-network-logo-of-photo-camera.svg' %}" alt="">
 						</a>
 					</div>
 					<div class="social-block">
 						<a href="#">
-						<img src="logo/pinterest-logo.svg" alt="">
+						<img src="{% static 'logo/pinterest-logo.svg' %}" alt="">
 						</a>
 					</div>
 				</div>
@@ -216,6 +217,7 @@
 				Форма обратной связи</div>
 					<div class="popup-form">	
 						<form action="#" class="main-form">
+							{% csrf_token %}
 							<div class="popup-form-header">
 								Узнайте больше о своём отдыхе
 							</div>
@@ -230,6 +232,6 @@
 					</div>
 	 		</div>
 	</div>
-	<script src="js/script.js"></script>
+	<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

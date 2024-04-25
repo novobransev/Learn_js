@@ -13,8 +13,7 @@ class User {
 
     exit () {
         return `Пользователь ${this.name} ушел`;
-    }
-    
+    };
 };
 
 let ivan = new User("Ivan", 25),
